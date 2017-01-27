@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    tools:context="com.example.mahdicseku.heartsoundrecorder.MainActivity">
+
+    <EditText
+        android:id="@+id/patientname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:hint="Enter a Patient Name"
+        />
+
+    <EditText
+        android:id="@+id/mobilenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patientname"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:hint="Enter a Mobile Number"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record"
+        android:id="@+id/button"
+        android:layout_below="@+id/myvisualizerview"
+        android:layout_alignParentLeft="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/button"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/button3"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP PLAYING RECORDING "
+        android:id="@+id/button4"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.example.mahdicseku.heartsoundrecorder.VisualizerView
+        android:id="@+id/myvisualizerview"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/mobilenumber"
+        android:layout_alignStart="@+id/mobilenumber"
+        android:layout_alignParentEnd="true">
+
+        <RadioButton android:id="@+id/radio_aortic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aortic"
+            />
+        <RadioButton android:id="@+id/radio_pulmonary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pulmonary"
+            />
+        <RadioButton android:id="@+id/radio_tricuspid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tricuspid"
+            />
+        <RadioButton android:id="@+id/radio_mitral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mitral"
+            />
+    </RadioGroup>
+</RelativeLayout>
